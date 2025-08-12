@@ -1,0 +1,10 @@
+{
+  "projectName": "smart-transportation-system-api-backend",
+  "meta": {
+    "type": "backend"
+  },
+  "backend": {
+    "platform": "node17"
+  },
+  "hash": "155e25f9"
+}
