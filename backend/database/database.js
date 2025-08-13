@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import {createClient } from "redis";
 
 const connectMongoDB = () => {
-    mongoose.connect(process.env.DB_URI)
+    mongoose.connect(process.env.MONGO_URI)
 
     mongoose.connection.on('connected', () => {
         console.log("MongoDB connected");
