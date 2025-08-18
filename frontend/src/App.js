@@ -63,58 +63,58 @@ function App() {
                     <Spinner size="xl" />
                 </Box>
             ) :
-                <Routes>
-                    <Route path='*' element={<PageNotFound />} />
-                    <Route path="/login" element={
-                        <Protected needLoggedIn={false}>
-                            <GoogleLogin />
-                        </Protected>
-                    } />
-                    <Route path="/register" element={
-                        <Protected needLoggedIn={false}>
-                            <RegisterPage />
-                        </Protected>
-                    } />
-                    <Route path="/complete-profile" element={
-                        <Protected needLoggedIn={true}>
-                            <CompleteRegistration/>
-                        </Protected>
-                    } />
-                    <Route path="/forgot-password" element={
-                        <Protected needLoggedIn={false}>
-                            <ForgotPasswordForm />
-                        </Protected>
-                    } />
-                    <Route path="/verify-otp" element={
-                        <Protected needLoggedIn={false}>
-                            <VerifyOtp navigate_link={'/reset-password'} />
-                        </Protected>
-                    } />
-                    <Route path='/reset-password' element={
-                        <Protected needLoggedIn={false}>
-                            <ResetPassword/>
-                        </Protected>
-                    } />
-                    <Route path="/verify-email" element={
-                        <Protected needLoggedIn={true}>
-                            <VerifyEmail/>
-                        </Protected>
-                    } />
+        <Routes>
+            <Route path='*' element={<PageNotFound />} />
+            <Route path="/login" element={
+                 <Protected needLoggedIn={false}>
+                    <GoogleLogin />
+                </Protected>
+            } />
+            <Route path="/register" element={
+                 <Protected needLoggedIn={false}>
+                     <RegisterPage />
+                </Protected>
+            } />
+            <Route path="/complete-profile" element={
+                <Protected needLoggedIn={true}>
+                    <CompleteRegistration/>
+                 </Protected>
+            } />
+            <Route path="/forgot-password" element={
+                <Protected needLoggedIn={false}>
+                    <ForgotPasswordForm />
+                </Protected>
+            } />
+            <Route path="/verify-otp" element={
+                <Protected needLoggedIn={false}>
+                    <VerifyOtp navigate_link={'/reset-password'} />
+                </Protected>
+            } />
+            <Route path='/reset-password' element={
+                <Protected needLoggedIn={false}>
+                    <ResetPassword/>
+                </Protected>
+            } />
+            <Route path="/verify-email" element={
+                <Protected needLoggedIn={true}>
+                    <VerifyEmail/>
+                </Protected>
+            } />
 
-                    <Route path="/" element={
-                        <Protected needLoggedIn={false}>
-                            <HomePage />
-                        </Protected>
-                    } />
-                    <Route path="/Home" element={
-                        <Navigate to={'/'} />
-                    } />
+            <Route path="/" element={
+                <Protected needLoggedIn={false}>
+                    <HomePage />
+                </Protected>
+            } />
+            <Route path="/Home" element={
+                <Navigate to={'/'} />
+            } />
 
-                    <Route path="/routes" element={
-                        <Protected needLoggedIn={false}>
-                            <RoutePage />
-                        </Protected>
-                    } />
+            <Route path="/routes" element={
+                <Protected needLoggedIn={false}>
+                    <RoutePage />
+                </Protected>
+            } />
                     <Route path="/trains/:trainNo" element={
                         <Protected needLoggedIn={false}>
                             <TrainRoutePath />
